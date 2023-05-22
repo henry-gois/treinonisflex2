@@ -22,6 +22,10 @@ jobs:
       run: |
        cd src
        java -cp . TesteMain
+   
+    # Versionamento por Git Runner
+    - name: Versão do Projeto
+      run: echo ${{ github.run_number }} 
     
     - uses: mr-smithers-excellent/docker-build-push@v6
       name: Deploy Docker image

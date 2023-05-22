@@ -31,7 +31,7 @@ jobs:
       name: Deploy Docker image
       with:
           image: henrygoiss/treinonislfei
-          tags: latest
+          tags: latest, MEU-${{ github.run_number }} 
           registry: docker.io
           dockerfile: dockerfile
           username: ${{ secrets.DOCKERHUB_USER }}
